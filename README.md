@@ -1,5 +1,5 @@
 # IoTGAN
-> Short blurb about what your product does.
+> This project proposes an on-device generative adversarial network (GAN) where each Internet of things (IoT) device pre-trains and shares its GAN weight vector over an ad-hoc local network.
 
 [![NPM Version][npm-image]][npm-url]
 [![Build Status][travis-image]][travis-url]
