@@ -5,10 +5,12 @@
 [![Build Status][travis-image]][travis-url]
 [![Downloads Stats][npm-downloads]][npm-url]
 
-One to two paragraph statement about your product and what it does.
+![](header.png)
+Since in the on-device machine learning, the training data used by the model will be limited in terms of amount of data and mode coverage. In the IoT network, wider data coverage can be obtained through the broadcast data to sensor nodes in the network, so that the trained mode coverage, training accuracy and energy efficiency can be optimized. Since IoT devices often use personal sensing data, direct share raw data will involve security risk. In this paper we propose IoTGAN framework that shares weight vectors provided from the neighboring sensor nodes in the network.
+
 
 ![](header.png)
-
+Figure 2 shows proposed IoT GAN Model. The model contains sensor data, GAN model and a classifier in a single node. Sensor data X and label Y can be used for training classifier directly. In order to train sharable weight vectors in the IoT network, an embedded buffer of GAN model uses received weight vector (WRX) to generate fake image and shuffling with sensor data for the further GAN training. After training, the GAN model transfer weight vectors (WTX) wirelessly to external nodes in the network. The GAN generated augmented dataset (X’, Y’) has been used to train classifier for extended mode coverage of classification.
 ## Installation
 
 OS X & Linux:
