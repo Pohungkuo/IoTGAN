@@ -11,9 +11,8 @@ Since in the on-device machine learning, the training data used by the model wil
 
 ![](Model.png)
 Figure 2 shows proposed IoT GAN Model. The model contains sensor data, GAN model and a classifier in a single node. Sensor data X and label Y can be used for training classifier directly. In order to train sharable weight vectors in the IoT network, an embedded buffer of GAN model uses received weight vector (WRX) to generate fake image and shuffling with sensor data for the further GAN training. After training, the GAN model transfer weight vectors (WTX) wirelessly to external nodes in the network. The GAN generated augmented dataset (X’, Y’) has been used to train classifier for extended mode coverage of classification.
+
 ## Running the codes
-
-
 GAN weight training:
 To train a GAN for digit 0-9: ./*main.py --train-digits 0,1,2,3,4,5,6,7,8,9. Models and sample generated images will be saved to ./output.
 
@@ -36,7 +35,8 @@ code example:
 
 To make this experiment, we use multiple Raspberry Pis as cluster nodes in the IoT Network. You have to install tensorflow on all the cluster nodes. 
 
-
+You also have to specify the task number for each node like this:
+code example:
 ## Release History
 
 * 0.2.1
