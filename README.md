@@ -45,5 +45,6 @@ Distributed under the license. See ``LICENSE`` for more information.
 [https://github.com/Pohungkuo/IoTGAN](https://github.com/Pohungkuo/IoTGAN)
 
 ## Resources
-https://github.com/gtoubassi/mnist-gan GAN Model for MNIST dataset
-https://www.tensorflow.org/deploy/distributed Distributed Tensorflow tutorial
+https://github.com/gtoubassi/mnist-gan GAN Model for MNIST dataset.
+
+https://www.tensorflow.org/deploy/distributed Distributed Tensorflow tutorial.
