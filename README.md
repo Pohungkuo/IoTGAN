@@ -23,7 +23,9 @@ To train mnist on GAN generated models which are sitting in ./output:
 For quick testing the idea of weight vector shared network, we use MNIST as our sensing dataset. We split MNIST digits into many cluster nodes. In the each node it contains single digit as local data. By collecting recived weight vector and regenerating the images, the amount of modes of training dataset can be extended. These images show extended training dataset, and generated image output after GAN training. 
 
 ![](result.PNG)
+
 code example:
+
 ![](code_example1.PNG)
 
 After GAN training, we can use scp for transmiting trained weight vector.
@@ -42,12 +44,6 @@ Distributed under the license. See ``LICENSE`` for more information.
 
 [https://github.com/Pohungkuo/IoTGAN](https://github.com/Pohungkuo/IoTGAN)
 
-
-
-<!-- Markdown link & img dfn's -->
-[npm-image]: https://img.shields.io/npm/v/datadog-metrics.svg?style=flat-square
-[npm-url]: https://npmjs.org/package/datadog-metrics
-[npm-downloads]: https://img.shields.io/npm/dm/datadog-metrics.svg?style=flat-square
-[travis-image]: https://img.shields.io/travis/dbader/node-datadog-metrics/master.svg?style=flat-square
-[travis-url]: https://travis-ci.org/dbader/node-datadog-metrics
-[wiki]: https://github.com/yourname/yourproject/wiki
+## Resources
+https://github.com/gtoubassi/mnist-gan GAN Model for MNIST dataset
+https://www.tensorflow.org/deploy/distributed Distributed Tensorflow tutorial
