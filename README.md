@@ -7,7 +7,7 @@ Since in the on-device machine learning, the training data used by the model wil
 
 
 ![](Model.png)
-Figure 2 shows proposed IoT GAN Model. The model contains sensor data, GAN model and a classifier in a single node. Sensor data X and label Y can be used for training classifier directly. In order to train sharable weight vectors in the IoT network, an embedded buffer of GAN model uses received weight vector (WRX) to generate fake image and shuffling with sensor data for the further GAN training. After training, the GAN model transfer weight vectors (WTX) wirelessly to external nodes in the network. The GAN generated augmented dataset (X’, Y’) has been used to train classifier for extended mode coverage of classification.
+Above photo shows proposed IoT GAN Model. The model contains sensor data, GAN model and a classifier in a single node. Sensor data X and label Y can be used for training classifier directly. In order to train sharable weight vectors in the IoT network, an embedded buffer of GAN model uses received weight vector (WRX) to generate fake image and shuffling with sensor data for the further GAN training. After training, the GAN model transfer weight vectors (WTX) wirelessly to external nodes in the network. The GAN generated augmented dataset (X’, Y’) has been used to train classifier for extended mode coverage of classification.
 
 ## Running the codes
 GAN weight training:
@@ -26,47 +26,23 @@ For quick testing the idea of weight vector shared network, we use MNIST as our 
 code example:
 ![](code_example1.PNG)
 
-After GAN training, we can use scp for transmiting trained weight vector:
-code example:
+After GAN training, we can use scp for transmiting trained weight vector.
 
 
 
 ## Development setup
 
-To make this experiment, we use multiple Raspberry Pis as cluster nodes in the IoT Network. You have to install tensorflow on all the cluster nodes. 
+To make this experiment, we use multiple Raspberry Pis as cluster nodes in the IoT Network. You have to install tensorflow on all the cluster nodes. You also have to specify the task number for each node.
 
-You also have to specify the task number for each node like this:
-code example:
-## Release History
-
-* 0.2.1
-    * CHANGE: Update docs (module code remains unchanged)
-* 0.2.0
-    * CHANGE: Remove `setDefaultXYZ()`
-    * ADD: Add `init()`
-* 0.1.1
-    * FIX: Crash when calling `baz()` (Thanks @GenerousContributorName!)
-* 0.1.0
-    * The first proper release
-    * CHANGE: Rename `foo()` to `bar()`
-* 0.0.1
-    * Work in progress
 
 ## Meta
 
-Your Name – [@YourTwitter](https://twitter.com/dbader_org) – YourEmail@example.com
+PoHung Kuo – [@Linkedin](https://www.linkedin.com/in/pohung-kuo-363446175/) – phkuo@stanford.edu
+Distributed under the license. See ``LICENSE`` for more information.
 
-Distributed under the XYZ license. See ``LICENSE`` for more information.
+[https://github.com/Pohungkuo/IoTGAN](https://github.com/Pohungkuo/IoTGAN)
 
-[https://github.com/yourname/github-link](https://github.com/dbader/)
 
-## Contributing
-
-1. Fork it (<https://github.com/yourname/yourproject/fork>)
-2. Create your feature branch (`git checkout -b feature/fooBar`)
-3. Commit your changes (`git commit -am 'Add some fooBar'`)
-4. Push to the branch (`git push origin feature/fooBar`)
-5. Create a new Pull Request
 
 <!-- Markdown link & img dfn's -->
 [npm-image]: https://img.shields.io/npm/v/datadog-metrics.svg?style=flat-square
