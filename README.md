@@ -22,7 +22,7 @@ To train mnist on GAN generated models which are sitting in ./output:
 ## Usage example
 For quick testing the idea of weight vector shared network, we use MNIST as our sensing dataset. We split MNIST digits into many cluster nodes. In the each node it contains single digit as local data. By collecting recived weight vector and regenerating the images, the amount of modes of training dataset can be extended. These images show extended training dataset, and generated image output after GAN training. 
 
-![](result.png)
+![](result.PNG)
 code example:
 
 After GAN traing, we can use scp for transmiting trained weight vector:
