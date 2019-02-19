@@ -24,7 +24,7 @@ For quick testing the idea of weight vector shared network, we use MNIST as our 
 
 ![](result.PNG)
 code example:
-![](code example1.PNG)
+![](code_example1.PNG)
 
 After GAN training, we can use scp for transmiting trained weight vector:
 code example:
