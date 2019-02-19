@@ -1,9 +1,6 @@
 # IoTGAN
 > This project proposes an on-device generative adversarial network (GAN) where each Internet of things (IoT) device pre-trains and shares its GAN weight vector over an ad-hoc local network.
 
-[![NPM Version][npm-image]][npm-url]
-[![Build Status][travis-image]][travis-url]
-[![Downloads Stats][npm-downloads]][npm-url]
 
 ![](Concept.png)
 Since in the on-device machine learning, the training data used by the model will be limited in terms of amount of data and mode coverage. In the IoT network, wider data coverage can be obtained through the broadcast data to sensor nodes in the network, so that the trained mode coverage, training accuracy and energy efficiency can be optimized. Since IoT devices often use personal sensing data, direct share raw data will involve security risk. In this paper we propose IoTGAN framework that shares weight vectors provided from the neighboring sensor nodes in the network.
@@ -14,10 +11,12 @@ Figure 2 shows proposed IoT GAN Model. The model contains sensor data, GAN model
 
 ## Running the codes
 GAN weight training:
-To train a GAN for digit 0-9: ./*main.py --train-digits 0,1,2,3,4,5,6,7,8,9. Models and sample generated images will be saved to ./output.
+To train a GAN for digit 0-9: 
+./*main.py --train-digits 0,1,2,3,4,5,6,7,8,9. Models and sample generated images will be saved to ./output.
 
 Classifier training by using generated weight files and also test the accuracy:
-To train mnist on GAN generated models which are sitting in ./output: ./main.py --train-mnist. After training calssifier, the output will be a % of accuracy testing result.
+To train mnist on GAN generated models which are sitting in ./output: 
+./main.py --train-mnist. After training calssifier, the output will be a % of accuracy testing result.
 
 
 ## Usage example
