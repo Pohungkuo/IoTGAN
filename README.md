@@ -29,13 +29,13 @@ code example:
 ![](code_example1.PNG)
 
 After GAN training, we can use scp for transmiting trained weight vector.
-
+![](code_example_scp.png)
 
 
 ## Development setup
 
 To make this experiment, we use multiple Raspberry Pis as cluster nodes in the IoT Network. You have to install tensorflow on all the cluster nodes. You also have to specify the task number for each node.
-
+![](code_example_ip.png)
 
 ## Meta
 
