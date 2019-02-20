@@ -11,14 +11,17 @@ Above photo shows proposed IoT GAN Model. The model contains sensor data, GAN mo
 
 ## Running the codes
 First, running the server for master node:
+
 python IoTGAN_server.py 0 ##task_number
 
 GAN weight training:
-To train a GAN for digit 0-9: 
+To train a GAN for digit 0-9, run: 
+
 ./IoTGAN_main.py --train-digits 0,1,2,3,4,5,6,7,8,9. Models and sample generated images will be saved to ./IoTGAN.
 
 Classifier training by using generated weight files and also test the accuracy:
-To train mnist on GAN generated models which are sitting in ./IoTGAN: 
+To train mnist on GAN generated models which are sitting in ./IoTGAN, run:
+
 ./IoTGAN_main.py --train-mnist. After training calssifier, the output will be a % of accuracy testing result.
 
 
