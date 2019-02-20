@@ -10,13 +10,16 @@ Since in the on-device machine learning, the training data used by the model wil
 Above photo shows proposed IoT GAN Model. The model contains sensor data, GAN model and a classifier in a single node. Sensor data X and label Y can be used for training classifier directly. In order to train sharable weight vectors in the IoT network, an embedded buffer of GAN model uses received weight vector (WRX) to generate fake image and shuffling with sensor data for the further GAN training. After training, the GAN model transfer weight vectors (WTX) wirelessly to external nodes in the network. The GAN generated augmented dataset (X’, Y’) has been used to train classifier for extended mode coverage of classification.
 
 ## Running the codes
+First, running the server for master node:
+python IoTGAN_server.py 0 ##task_number
+
 GAN weight training:
 To train a GAN for digit 0-9: 
-./*main.py --train-digits 0,1,2,3,4,5,6,7,8,9. Models and sample generated images will be saved to ./output.
+./IoTGAN_main.py --train-digits 0,1,2,3,4,5,6,7,8,9. Models and sample generated images will be saved to ./IoTGAN.
 
 Classifier training by using generated weight files and also test the accuracy:
-To train mnist on GAN generated models which are sitting in ./output: 
-./main.py --train-mnist. After training calssifier, the output will be a % of accuracy testing result.
+To train mnist on GAN generated models which are sitting in ./IoTGAN: 
+./IoTGAN_main.py --train-mnist. After training calssifier, the output will be a % of accuracy testing result.
 
 
 ## Usage example
@@ -34,7 +37,7 @@ After GAN training, we can use scp for transmiting trained weight vector.
 
 ## Development setup
 
-To make this experiment, we use multiple Raspberry Pis as cluster nodes in the IoT Network. You have to install tensorflow on all the cluster nodes. You also have to specify the task number for each node.
+To make this experiment, we use multiple Raspberry Pis as cluster nodes in the IoT Network. You have to install tensorflow on all the cluster nodes. You also have to specify the IP and task number for each node.
 ![](code_example_ip.png)
 
 ## Meta
